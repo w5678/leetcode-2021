@@ -1,3 +1,11 @@
+"""
+https://leetcode-cn.com/problems/roman-to-integer/
+
+思路就是：
+找到在左边的字符，在计算后的总值基础上 减去它的两倍
+
+"""
+
 class Solution:
     def romanToInt(self, s: str) -> int:
         d={
