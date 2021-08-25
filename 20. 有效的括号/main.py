@@ -36,6 +36,31 @@ class Solution:
         else:
             return False
 
+    """
+    使用stack来做，
+        lefts=["(","[","{"]
+        rights=[")","]","}"]
+        lens = len(s)
+        cnt =lens-1
+        stack=[]
+        for k in s:
+            if k in lefts:
+                stack.append(k)
+            if k in rights:
+                if not stack:
+                    return False
+                k1=stack.pop() 
+                if rights.index(k) == lefts.index(k1):
+                    pass
+                else:
+                    return False
+        if len(stack):
+            return False
+        return True
+
+    
+    """
+
 
 
 
