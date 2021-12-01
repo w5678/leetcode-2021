@@ -1,22 +1,10 @@
 from LinkNode import Node
+from LinkNode import create_linklist,show_linklist
 
+"""
+反转单链表
 
-def create_linklist(nums):
-    head=Node(nums[0],None)
-    p=head
-    for i in nums[1:]:
-        p.next = Node(i,None)
-        p= p.next
-    return head
-
-def show_linklist(head):
-    nums=[]
-    while head:
-        v=head.value
-        nums.append(v)
-        print(v)
-        head= head.next
-    return nums
+"""
 
 def reverse_linklist(head):
     """递归的方式
@@ -78,13 +66,7 @@ def reverse_linklist2(head):
     return pre
 
 
-
-
 if __name__ == '__main__':
     nums=[1,2,3,4,5,6,7,8,9]
     head = create_linklist(nums)
-    show_linklist(head)
-    print("xxxx"*20)
-    head1 = reverse_linklist2(head)
-    show_linklist(head1)
 
