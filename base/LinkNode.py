@@ -24,3 +24,8 @@ def show_linklist(head):
     outputs += "-> None"
     print(outputs)
     return nums
+
+def len_linklist(head):
+    if not head:
+        return 0
+    return len_linklist(head.next)+1
